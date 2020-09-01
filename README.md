@@ -31,6 +31,7 @@ Author: Group CAPOBU
 
 # Colecciones en firebase
 
+| Colecciones        |
 | ------------------- |
 | Tipo_cuarentena |
 | Medida  |
