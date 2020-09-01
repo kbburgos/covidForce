@@ -1089,6 +1089,261 @@
     </div>
 
 
+    
+    <div class="container">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <h3></h3>
+
+            <section>
+              <article>
+                <h2>Usuario Controller</h2>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Operaci&oacute;n</td>
+                      <td>Ruta</td>
+                      <td>Parámetro</td>
+                      <td>Descripci&oacute;n</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>select</td>
+                      <td><a href="#getU">get/</a></td>
+                      <td>n/a</td>
+                      <td>Retorna todos los usuarios guardados en la base</td>
+                    </tr>
+                    <tr>
+                      <td>add</td>
+                      <td><a href="#postAddU">post/add</a></td>
+                      <td>cedula,email,nombre,apellido,fecha_nacimiento,contrasena,direccion,id_semaforo</td>
+                      <td>
+                        Agrega un usuario a la tabla usuario de la base de
+                        batos mysql
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>update</td>
+                      <td><a href="#updateU">post/update/:id</a></td>
+                      <td>cedula,email,nombre,apellido,fecha_nacimiento,contrasena,direccion,id_semaforo</td>
+                      <td>Editar un usuario en la base de datos dado un id</td>
+                    </tr>
+                    <tr>
+                      <td>update: id</td>
+                      <td><a href="#updateIDU">get/update/:id</a></td>
+                      <td>cedula</td>
+                      <td>
+                        Retorna el usuario a editar según el id ingresado
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>delete</td>
+                      <td><a href="#deleteU">get/delete/:id</a></td>
+                      <td>cedula</td>
+                      <td>n/a</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="postAddU">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>ADD usuario</h3>
+                <h6 style="font-weight: bold">post/add</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>body</td>
+                      <td>Agrega un usuario a la base</td>
+                      <td>Object</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>requerido</code>objeto</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="getU">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>GET usuario</h3>
+                <h6 style="font-weight: bold">get/</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>all</td>
+                      <td>Obetiene los usuarios de la base de datos</td>
+                      <td>query</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>global</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="updateU">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>UPDATE usuario</h3>
+                <h6 style="font-weight: bold">/</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                    <tr>
+                      <td>body</td>
+                      <td></td>
+                      <td>body</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="updateIDU">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>UPDATE (edit) usuario</h3>
+                <h6 style="font-weight: bold">get/update:id</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                    <tr>
+                      <td>body</td>
+                      <td></td>
+                      <td>body</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="deleteU">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>DELETE usuario</h3>
+                <h6 style="font-weight: bold">get/delete:id</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 400 no se elimin&oacute;</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
 
     <script src="scripts/app.min.js"></script>
