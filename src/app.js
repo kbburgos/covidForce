@@ -35,8 +35,8 @@ app.use('/customer', customerRoutes);
 app.use('/', markerRoutes);
 app.use('/semaforo', semaforoRoutes);
 app.use('/', semaforoRoutes);
-app.use('/', reportRoutes);
-app.use('/', zonaRoutes);
+app.use('/reporte', reportRoutes);
+app.use('/zona', zonaRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
