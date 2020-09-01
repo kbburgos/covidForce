@@ -31,7 +31,8 @@ app.use(express.urlencoded({extended: false}));
 
 // routes
 app.use('/', customerRoutes);
-app.use('/', markerRoutes);
+app.use('/customer', customerRoutes);
+app.use('/marker', markerRoutes);
 app.use('/', semaforoRoutes);
 app.use('/', reportRoutes);
 app.use('/', zonaRoutes);

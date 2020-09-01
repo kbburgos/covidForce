@@ -6,6 +6,7 @@ controller.list = (req, res) => {
       if (err) {
         res.json(err);
       }
+      console.log(customers)
       res.render("customers", {
         data: customers,
       });
@@ -35,6 +36,7 @@ controller.edit = (req, res) => {
       "SELECT * FROM Usuario WHERE cedula = ?",
       [cedula],
       (err, rows) => {
+        console.log(rows)
         res.render("customers_edit", {
           data: rows[0],
         });
