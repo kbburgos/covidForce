@@ -857,13 +857,13 @@
                   <tbody>
                     <tr>
                       <td>select</td>
-                      <td><a href="#get">get/</a></td>
+                      <td><a href="#getS">get/</a></td>
                       <td>n/a</td>
                       <td>Retorna todos los semaforos guardados en la base</td>
                     </tr>
                     <tr>
                       <td>add</td>
-                      <td><a href="#postAdd">post/add</a></td>
+                      <td><a href="#postAddS">post/add</a></td>
                       <td>id_semaforo,color, por_zona, por_contacto, por_sintoma, id_cuarentena</td>
                       <td>
                         Agrega un semaforo a la tabla semaforo de la base de
@@ -872,13 +872,13 @@
                     </tr>
                     <tr>
                       <td>update</td>
-                      <td><a href="#update">post/update/:id</a></td>
+                      <td><a href="#updateS">post/update/:id</a></td>
                       <td>id_semaforo,color, por_zona, por_contacto, por_sintoma, id_cuarentena</td>
                       <td>Editar un semaforo en la base de datos dado un id</td>
                     </tr>
                     <tr>
                       <td>update: id</td>
-                      <td><a href="#updateID">get/update/:id</a></td>
+                      <td><a href="#updateIDS">get/update/:id</a></td>
                       <td>id_semaforo</td>
                       <td>
                         Retorna el semaforo a editar según el id ingresado
@@ -886,7 +886,7 @@
                     </tr>
                     <tr>
                       <td>delete</td>
-                      <td><a href="#delete">get/delete/:id</a></td>
+                      <td><a href="#deleteS">get/delete/:id</a></td>
                       <td>id_semaforo</td>
                       <td>n/a</td>
                     </tr>
@@ -899,7 +899,7 @@
       </div>
     </div>
 
-    <div class="container" id="postAdd">
+    <div class="container" id="postAddS">
       <div class="columns">
         <div class="column is-9-desktop">
           <div class="content" id="main-content-wrapper">
@@ -934,7 +934,7 @@
       </div>
     </div>
 
-    <div class="container" id="get">
+    <div class="container" id="getS">
       <div class="columns">
         <div class="column is-9-desktop">
           <div class="content" id="main-content-wrapper">
@@ -969,7 +969,7 @@
       </div>
     </div>
 
-    <div class="container" id="update">
+    <div class="container" id="updateS">
       <div class="columns">
         <div class="column is-9-desktop">
           <div class="content" id="main-content-wrapper">
@@ -1011,7 +1011,7 @@
       </div>
     </div>
 
-    <div class="container" id="updateID">
+    <div class="container" id="updateIDS">
       <div class="columns">
         <div class="column is-9-desktop">
           <div class="content" id="main-content-wrapper">
@@ -1053,7 +1053,7 @@
       </div>
     </div>
 
-    <div class="container" id="delete">
+    <div class="container" id="deleteS">
       <div class="columns">
         <div class="column is-9-desktop">
           <div class="content" id="main-content-wrapper">
