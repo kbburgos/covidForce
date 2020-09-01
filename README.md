@@ -38,3 +38,14 @@ Author: Group CAPOBU
 | Parroquia    |
 | Sector  |
 
+
+
+# Tablas en el API
+
+| Entidades       |
+| ------------------- |
+| Usuarios |
+| Marcador  |
+| Semaforo    |
+| Reporte  |
+| Zona  |
