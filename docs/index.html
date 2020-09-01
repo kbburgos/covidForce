@@ -327,6 +327,510 @@
       </div>
     </div>
 
+    <div class="container">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <h3></h3>
+
+            <section>
+              <article>
+                <h2>Reporte Controller</h2>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Operaci&oacute;n</td>
+                      <td>Ruta</td>
+                      <td>Parámetro</td>
+                      <td>Descripci&oacute;n</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>select</td>
+                      <td><a href="#get">get/</a></td>
+                      <td>n/a</td>
+                      <td>Retorna todos los reportes guardados en la base</td>
+                    </tr>
+                    <tr>
+                      <td>add</td>
+                      <td><a href="#postAdd">post/add</a></td>
+                      <td>id_reporte , id_zona, id_medida, cedula, fecha</td>
+                      <td>
+                        Agrega un reportes a la tabla reportes de la base de
+                        batos mysql
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>update</td>
+                      <td><a href="#update">post/update/:id</a></td>
+                      <td>id_reporte , id_zona, id_medida, cedula, fecha</td>
+                      <td>Editar un registro en la base de datos dado un id</td>
+                    </tr>
+                    <tr>
+                      <td>update: id</td>
+                      <td><a href="#updateID">get/update/:id</a></td>
+                      <td>id_reporte</td>
+                      <td>
+                        Retorna el registro a editar según el id ingresado
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>delete</td>
+                      <td><a href="#delete">get/delete/:id</a></td>
+                      <td>id_reporte</td>
+                      <td>n/a</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="postAdd">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>ADD Reporte</h3>
+                <h6 style="font-weight: bold">post/add</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>body</td>
+                      <td>Agrega un reporte a la base</td>
+                      <td>Object</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>requerido</code>objeto</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="get">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>GET Reporte</h3>
+                <h6 style="font-weight: bold">get/</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>all</td>
+                      <td>Obetiene los reportes de la base de datos</td>
+                      <td>query</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>global</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="update">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>UPDATE Reporte</h3>
+                <h6 style="font-weight: bold">/</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                    <tr>
+                      <td>body</td>
+                      <td></td>
+                      <td>body</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="updateID">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>UPDATE (edit) Reporte</h3>
+                <h6 style="font-weight: bold">get/update:id</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                    <tr>
+                      <td>body</td>
+                      <td></td>
+                      <td>body</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="delete">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>DELETE Reporte</h3>
+                <h6 style="font-weight: bold">get/delete:id</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 400 no se elimin&oacute;</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <h3></h3>
+
+            <section>
+              <article>
+                <h2>Zona Controller</h2>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Operaci&oacute;n</td>
+                      <td>Ruta</td>
+                      <td>Parámetro</td>
+                      <td>Descripci&oacute;n</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>select</td>
+                      <td><a href="#get">get/</a></td>
+                      <td>n/a</td>
+                      <td>Retorna todos las Zonas guardados en la base</td>
+                    </tr>
+                    <tr>
+                      <td>add</td>
+                      <td><a href="#postAdd">post/add</a></td>
+                      <td>id_Zona, id_sector, lat, lng, nombre, direccion</td>
+                      <td>
+                        Agrega un Zonas a la tabla Zona de la base de batos
+                        mysql
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>update</td>
+                      <td><a href="#update">post/update/:id</a></td>
+                      <td>id_Zona, id_sector, lat, lng, nombre, direccion</td>
+                      <td>Editar un registro en la base de datos dado un id</td>
+                    </tr>
+                    <tr>
+                      <td>update: id</td>
+                      <td><a href="#updateID">get/update/:id</a></td>
+                      <td>id_Zona</td>
+                      <td>
+                        Retorna el registro a editar según el id ingresado
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>delete</td>
+                      <td><a href="#delete">get/delete/:id</a></td>
+                      <td>id_Zona</td>
+                      <td>n/a</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="postAdd">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>ADD Zona</h3>
+                <h6 style="font-weight: bold">post/add</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>body</td>
+                      <td>Agrega un Zona a la base</td>
+                      <td>Object</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>requerido</code>objeto</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="get">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>GET Zona</h3>
+                <h6 style="font-weight: bold">get/</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>all</td>
+                      <td>Obtiene los Zonas de la base de datos</td>
+                      <td>query</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>global</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="update">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>UPDATE Zona</h3>
+                <h6 style="font-weight: bold">/</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                    <tr>
+                      <td>body</td>
+                      <td></td>
+                      <td>body</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="updateID">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>UPDATE (edit) Zona</h3>
+                <h6 style="font-weight: bold">get/update:id</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                    <tr>
+                      <td>body</td>
+                      <td></td>
+                      <td>body</td>
+                      <td>200 OK - 404 sin informacion</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="delete">
+      <div class="columns">
+        <div class="column is-9-desktop">
+          <div class="content" id="main-content-wrapper">
+            <section>
+              <article>
+                <h3>DELETE Zona</h3>
+                <h6 style="font-weight: bold">get/delete:id</h6>
+                <table class="editorDemoTable">
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Descripci&oacute;n</td>
+                      <td>Tipo</td>
+                      <td>Respuesta</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>id</td>
+                      <td></td>
+                      <td>path</td>
+                      <td>200 OK - 400 no se elimin&oacute;</td>
+                      <td><code>required</code>param</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="scripts/app.min.js"></script>
     <script>
       PR.prettyPrint();
