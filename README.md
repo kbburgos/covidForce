@@ -1,4 +1,4 @@
-# CRUD Nodejs and Mysql
+# Covid Force
 this is a basic application crud that uses nodejs in the backend, mysql as database.
 
 # Usefull Commands
