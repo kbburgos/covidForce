@@ -8,7 +8,10 @@ const app = express();
 
 // importing routes
 const customerRoutes = require('./routes/customer');
-const markerRoutes = require('./routes/marker')
+const markerRoutes = require('./routes/marker');
+const reportRoutes = require('./routes/report');
+const semaforoRoutes = require('./routes/semaforo');
+const zonaRoutes = require('./routes/zona');
 
 // settings
 app.set('port', process.env.PORT || 3000);
@@ -28,7 +31,10 @@ app.use(express.urlencoded({extended: false}));
 
 // routes
 app.use('/', customerRoutes);
-app.use('/', markerRoutes)
+app.use('/', markerRoutes);
+app.use('/', semaforoRoutes);
+app.use('/', reportRoutes);
+app.use('/', zonaRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
