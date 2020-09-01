@@ -23,7 +23,7 @@ app.use(morgan('dev'));
 app.use(myConnection(mysql, {
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: '0000',
   port: 3306,
   database: 'covid_force'
 }, 'single'));
@@ -32,7 +32,8 @@ app.use(express.urlencoded({extended: false}));
 // routes
 app.use('/', customerRoutes);
 app.use('/customer', customerRoutes);
-app.use('/marker', markerRoutes);
+app.use('/', markerRoutes);
+app.use('/semaforo', semaforoRoutes);
 app.use('/', semaforoRoutes);
 app.use('/', reportRoutes);
 app.use('/', zonaRoutes);

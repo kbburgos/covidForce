@@ -1,0 +1,99 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td>id</td>
+            <td>id_semaforo</td>
+            <td>color</td>
+            <td>por_zona</td>
+            <td>por_contacto</td>
+            <td>por_sintoma</td>
+            <td>id_cuarentena</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (data) { %> <% for(var i = 0; i < data.length; i++) { %>
+          <tr>
+            <td><%= (i + 1) %></td>
+            <td><%= data[i].id_semaforo %></td>
+            <td><%= data[i].color %></td>
+            <td><%= data[i].por_zona %></td>
+            <td><%= data[i].por_contacto %></td>
+            <td><%= data[i].por_sintoma %></td>
+            <td><%= data[i].id_cuarentena %></td>
+          </tr>
+          <% } %> <% } %>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-body">
+          <form action="/semaforo" method="POST">
+            <div class="form-group">
+              <input
+                type="text"
+                name="id_semaforo"
+                placeholder="id_semaforo"
+                class="form-control"
+                autofocus
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="color"
+                placeholder="color"
+                class="form-control"
+                autofocus
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="por_zona"
+                placeholder="por_zona"
+                class="form-control"
+                autofocus
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="por_contacto"
+                placeholder="por_contacto"
+                class="form-control"
+                autofocus
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="por_sintoma"
+                placeholder="por_sintoma"
+                class="form-control"
+                autofocus
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="id_cuarentena"
+                placeholder="id_cuarentena"
+                class="form-control"
+                autofocus
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">save semaforo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>

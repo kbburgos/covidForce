@@ -6,6 +6,7 @@ controller.list = (req, res) => {
       if (err) {
         res.json(err);
       }
+      console.log(semaforo);
       res.render("semaforo", {
         data: semaforo,
       });
