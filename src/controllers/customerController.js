@@ -22,6 +22,7 @@ controller.save = (req, res) => {
       data,
       (err, customer) => {
         console.log(customer);
+        res.redirect('/');
       }
     );
   });
